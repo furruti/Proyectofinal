@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Editar blog</h2>
+  
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar cambios</button>
+  </form>
+
+  <a href="{% url 'blog_detail' blog.id %}">Cancelar</a>  <!-- Enlace para volver al detalle del blog -->
+{% endblock %}

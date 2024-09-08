@@ -1,0 +1,13 @@
+<h1>Lista de blogs</h1>
+{% if blogs %}
+    <ul>
+    {% for blog in blogs %}
+        <li>
+            <a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a>
+            - {{ blog.author }}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay páginas aún</p>
+{% endif %}

@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Crear una nueva página de blog</h2>
+  
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Crear Blog</button>
+  </form>
+
+  <a href="{% url 'blog_list' %}">Volver a la lista de blogs</a>
+{% endblock %}

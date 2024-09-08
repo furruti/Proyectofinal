@@ -1,0 +1,7 @@
+<h1>{{ Blog }}</h1>
+<h3>{{ My first blog }}</h3>
+<p>{{ blog.body }}</p>
+<p>Escrito por: {{ Francisco Urruti }}</p>
+{% if blog.image %}
+    <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+{% endif %}
